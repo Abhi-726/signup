@@ -43,12 +43,12 @@ inumber.addEventListener("change",()=>{
     num_val=/^[6789][0-9]{9}$/;
     if(!num_val.test(number)){
         nspan.innerHTML="* Invalid Number";
-        val[1]=1;
+        val[4]=1;
         eline.style.background="red";
     }
     else{
         espan.innerHTML="";
-        val[1]=0;
+        val[4]=0;
         eline.style.background="#398eca";
     }
 })

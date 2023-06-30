@@ -1,8 +1,9 @@
 var iname=document.querySelector("#name");
 var iemail=document.querySelector("#email");
+var inumber=document.querySelector("#number");
 var ipass=document.querySelector("#pass");
 var icpass=document.querySelector("#cpass");
-var val=[1,1,1,1];
+var val=[1,1,1,1,1];
 iname.addEventListener("change",()=>{
     var nline=document.querySelector(".nline");
     var nspan=document.querySelector(".name_error");
@@ -26,6 +27,22 @@ iemail.addEventListener("change",()=>{
     email_val=/^[a-zA-Z0-9_]{4,}@[a-zA-z]{4,}.[a-z]{2,5}$/;
     if(!email_val.test(email)){
         espan.innerHTML="* Invalid Email Address";
+        val[1]=1;
+        eline.style.background="red";
+    }
+    else{
+        espan.innerHTML="";
+        val[1]=0;
+        eline.style.background="#398eca";
+    }
+})
+inumber.addEventListener("change",()=>{
+    var eline=document.querySelector(".eline");
+    var nspan=document.querySelector(".number_error");
+    var number=document.querySelector("#number").value;
+    num_val=/^[6789][0-9]{9}$/;
+    if(!num_val.test(number)){
+        nspan.innerHTML="* Invalid Number";
         val[1]=1;
         eline.style.background="red";
     }
@@ -67,6 +84,7 @@ icpass.addEventListener("change",()=>{
         cpline.style.background="#398eca";
     }
 })
+
 var sub_btn=document.querySelector(".sub_btn");
 sub_btn.addEventListener("click",()=>{
     for(let i=0;i<val.length;i++){

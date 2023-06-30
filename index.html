@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poppins&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        .alert{
+            border:1px solid red;
+            padding:10px 0px;
+            border-radius:8px;
+            color:red;
+            text-align:center;
+            margin-bottom:0px;
+            background-color:#FDF6F6;
+            text-shadow: 0px 0.1px 1.1px red;
+        } 
+        .error{
+            font-weight:600;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1 class="head">Company Name</h1>
+        <h1 class="t-signin">Sign Up</h1>
+        <div class="cross">
+            <h5>&#215</h5>
+        </div>
+    </div>
+    <h2 class="login">Already have an account? <a href="login.html">Log In</a></h2>
+    <div class="form-cont">
+        <form class="signup-form" action="new_user.php" method="post">
+        <div class="input-box">
+            <input type="text" id="name" name="name" value="" placeholder="." required>
+            <label for="name">Name</label>
+            <div class="line nline"></div>
+            <span class="name_error error"></span>
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" name="email" value="" placeholder="."  required>
+            <label for="email">Email</label>
+            <div class="line eline"></div>
+            <span class="email_error error"></span>
+        </div>
+        <div class="input-box">
+            <input type="password" id="pass" name="pass" value=""placeholder="."  required>
+            <label for="pass">Password</label>
+            <div class="line pline"></div>
+            <span class="password_error error"></span>
+        </div>
+        <div class="input-box">
+            <input type="password" id="cpass" name="pass" value="" placeholder="."  required>
+            <label for="pass">Confirm password</label>
+            <div class="line cpline"></div>
+            <span class="cpassword_error error"></span>
+        </div>
+            <button type="submit" class="sub_btn">Sign Up</button>
+      </form>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

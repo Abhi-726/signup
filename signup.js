@@ -47,7 +47,7 @@ inumber.addEventListener("change",()=>{
         eline.style.background="red";
     }
     else{
-        espan.innerHTML="";
+        nspan.innerHTML="";
         val[4]=0;
         eline.style.background="#398eca";
     }
